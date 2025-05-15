@@ -1,28 +1,54 @@
-body {
+/* Base styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #00ff88;
+    --text-color: #333;
+    --background-color: #ffffff;
+}
+
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     text-align: center;
 }
 
 h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
 }
 
 p {
-    font-size: 1.2em;
-    margin-bottom: 1.5em;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 1rem;
 }
 
 .button {
@@ -56,13 +82,19 @@ p {
 }
 
 .timer {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
 }
 
 .time-block {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,8 +102,9 @@ p {
 }
 
 .time-block span:first-child {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: bold;
+    display: block;
     background: linear-gradient(45deg, #007bff, #00ff88);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -89,7 +122,8 @@ p {
 }
 
 .time-block .label {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    opacity: 0.8;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #666;
@@ -107,24 +141,27 @@ p {
     color: #ff4444;
 }
 
-h2 {
-    color: #007bff;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+/* Mobile-specific adjustments */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .countdown {
+        padding: 1rem;
+    }
+    
+    .timer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
 }
 
-@media (max-width: 768px) {
-    .timer {
-        gap: 1rem;
-    }
-    
-    .time-block {
-        min-width: 70px;
-    }
-    
-    .time-block span:first-child {
-        font-size: 2.5rem;
+/* PWA support - handle safe areas */
+@supports (padding: max(0px)) {
+    .container {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
+        padding-bottom: max(1rem, env(safe-area-inset-bottom));
     }
 }
