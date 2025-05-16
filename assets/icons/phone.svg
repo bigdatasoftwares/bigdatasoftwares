@@ -1,0 +1,44 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .phone-body { fill: none; stroke: #000; stroke-width: 3; }
+        .notch { fill: #000; }
+        .dynamic-island { fill: #000; }
+    </style>
+    
+    <!-- Phone body with rounded corners -->
+    <rect
+        class="phone-body"
+        x="25" 
+        y="10" 
+        width="50" 
+        height="80" 
+        rx="12"
+    />
+    
+    <!-- Dynamic Island -->
+    <rect
+        class="dynamic-island"
+        x="40"
+        y="15"
+        width="20"
+        height="6"
+        rx="3"
+    />
+    
+    <!-- Home Indicator -->
+    <rect
+        class="notch"
+        x="45"
+        y="82"
+        width="10"
+        height="2"
+        rx="1"
+    />
+    
+    <!-- Volume buttons (left side) -->
+    <rect class="phone-body" x="22" y="30" width="3" height="8" rx="1.5" />
+    <rect class="phone-body" x="22" y="45" width="3" height="8" rx="1.5" />
+    
+    <!-- Power button (right side) -->
+    <rect class="phone-body" x="75" y="35" width="3" height="12" rx="1.5" />
+</svg>
