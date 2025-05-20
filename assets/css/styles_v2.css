@@ -298,7 +298,7 @@ p {
 .logo-text {
     font-size: 1.8rem;
     font-weight: 700;
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    background: goldenrod;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
