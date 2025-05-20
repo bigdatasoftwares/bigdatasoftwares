@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- AWS-style cloud -->
+    <path d="M36 32H12C8.68629 32 6 29.3137 6 26C6 22.6863 8.68629 20 12 20C12.0506 20 12.1011 20.0014 12.1513 20.0041C12.0516 19.5142 12 19.0097 12 18.5C12 14.3579 15.3579 11 19.5 11C22.5585 11 25.1991 12.7189 26.322 15.2188C27.3345 14.4633 28.6001 14 30 14C33.3137 14 36 16.6863 36 20C39.3137 20 42 22.6863 42 26C42 29.3137 39.3137 32 36 32Z" stroke="currentColor" stroke-width="2"/>
+    <!-- Server/Data symbols -->
+    <path d="M18 36H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M22 40H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M24 32V42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
