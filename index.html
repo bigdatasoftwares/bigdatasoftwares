@@ -3,38 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Big Data Softwares</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Big Data Softwares - Transform Your Data Journey</title>
+    <link rel="stylesheet" href="./assets/css/styles_v2.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Coming Soon</h1>
-        <p>We're working hard to bring you something amazing. Stay tuned!</p>
-        <div class="countdown">
-            <h2>Launch Countdown</h2>
-            <div class="timer">
-                <div class="time-block">
-                    <span id="days">00</span>
-                    <span class="label">Days</span>
-                </div>
-                <div class="time-block">
-                    <span id="hours">00</span>
-                    <span class="label">Hours</span>
-                </div>
-                <div class="time-block">
-                    <span id="minutes">00</span>
-                    <span class="label">Minutes</span>
-                </div>
-                <div class="time-block">
-                    <span id="seconds">00</span>
-                    <span class="label">Seconds</span>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">Big Data Softwares</span>
+        </div>
+        <div class="nav-links">
+            <a href="#expertise">Our Expertise</a>
+            <a href="#services">Services</a>
+            <a href="#contact" class="cta-button">Let's Talk</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>
+                    <span class="animate-text">Data Engineering.</span>
+                    <span class="animate-text delay-1">Cloud Solutions.</span>
+                    <span class="animate-text delay-2">AI / ML Ops.</span>
+                    <span class="animate-text delay-3">Real-time Analytics.</span>
+                </h1>
+                <p class="fade-in">With years of expertise in data engineering, we architect and deliver scalable big data solutions that drive business growth.</p>
+                <div class="hero-cta">
+                    <button class="cta-btn primary" onclick="scrollToSection('#services')">
+                        Explore Services
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M19 12l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <button class="cta-btn secondary" onclick="scrollToSection('#contact')">
+                        Get Started
+                    </button>
                 </div>
             </div>
-        </div>
-        <footer class="footer">
-            <p>&copy; 2025 Big Data Softwares. All rights reserved.</p>
-        </footer>
-    </div>
-    <script src="./assets/js/script.js" defer></script>
+            
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="data-card chart"></div>
+                    <div class="data-card metrics"></div>
+                    <div class="data-card dashboard"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="content-section">
+            <div class="section-container">
+                <!-- <span class="section-badge">Why Choose Us</span> -->
+                <h2 class="section-title">Built on <span class="highlight">Trust</span>, Driven by <span class="highlight">Excellence</span></h2>
+                <p class="section-subtitle">We combine years of enterprise experience with cutting-edge technology to deliver solutions that last.</p>
+                
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <img src="./assets/icons/experience.svg" alt="Experience icon" class="expertise-img">
+                        </div>
+                        <h3>Deep Industry Experience</h3>
+                        <p>With 6+ years of hands-on expertise, we've successfully delivered 50+ enterprise data projects across fintech, healthcare, and e-commerce sectors.</p>
+                        <ul class="expertise-list">
+                            <li>Enterprise-grade solutions</li>
+                            <li>Industry best practices</li>
+                            <li>Proven delivery methodology</li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <img src="./assets/icons/cloud.svg" alt="Cloud icon" class="expertise-img">
+                        </div>
+                        <h3>Cloud & Technology</h3>
+                        <p>Certified experts in major cloud platforms with a deep understanding of modern data architecture and scalable systems.</p>
+                        <ul class="expertise-list">
+                            <li>AWS, Azure & GCP certified</li>
+                            <li>Modern data stack expertise</li>
+                            <li>Cost-optimized solutions</li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <img src="./assets/icons/agile.svg" alt="Agile icon" class="expertise-img">
+                        </div>
+                        <h3>Agile Methodology</h3>
+                        <p>We follow an iterative approach with continuous feedback loops ensuring quick wins while building for scale.</p>
+                        <ul class="expertise-list">
+                            <li>Rapid prototyping</li>
+                            <li>Continuous delivery</li>
+                            <li>Transparent communication</li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <img src="./assets/icons/innovation.svg" alt="Innovation icon" class="expertise-img">
+                        </div>
+                        <h3>Innovation Focus</h3>
+                        <p>Stay ahead with our expertise in emerging technologies and innovative approaches to data challenges.</p>
+                        <ul class="expertise-list">
+                            <li>AI/ML integration</li>
+                            <li>Real-time analytics</li>
+                            <li>Future-proof architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="content-section alt-bg">
+            <div class="section-container">
+                <!-- <span class="section-badge">Our Services</span> -->
+                <h2 class="section-title">Strategic <span class="highlight">Data Solutions</span></h2>
+                <p class="section-subtitle">Comprehensive data consulting services tailored to transform your business objectives into measurable outcomes.</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="./assets/icons/experience.svg" alt="Pipeline icon" class="service-img">
+                        </div>
+                        <h3>Enterprise Data Pipeline Development</h3>
+                        <p>Build robust, scalable data pipelines that ensure seamless data flow across your organization.</p>
+                        <ul class="service-list">
+                            <li>Modern ETL/ELT Architecture Design</li>
+                            <li>Stream Processing Implementation</li>
+                            <li>Data Quality Framework Development</li>
+                            <li>Performance & Cost Optimization</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="./assets/icons/cloud.svg" alt="Cloud Migration icon" class="service-img">
+                        </div>
+                        <h3>Strategic Cloud Migration</h3>
+                        <p>Execute seamless cloud transitions with our proven migration methodology and cloud-native expertise.</p>
+                        <ul class="service-list">
+                            <li>Cloud Readiness Assessment</li>
+                            <li>Infrastructure Automation (IaC)</li>
+                            <li>Legacy Modernization Strategy</li>
+                            <li>FinOps Implementation</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="./assets/icons/agile.svg" alt="MLOps icon" class="service-img">
+                        </div>
+                        <h3>MLOps & AI Engineering</h3>
+                        <p>Implement production-grade machine learning solutions with robust operational frameworks.</p>
+                        <ul class="service-list">
+                            <li>ML Pipeline Orchestration</li>
+                            <li>Model Performance Monitoring</li>
+                            <li>Feature Store Implementation</li>
+                            <li>AutoML Platform Integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="./assets/icons/innovation.svg" alt="Analytics icon" class="service-img">
+                        </div>
+                        <h3>Advanced Analytics Solutions</h3>
+                        <p>Transform raw data into actionable insights with our comprehensive analytics solutions.</p>
+                        <ul class="service-list">
+                            <li>Real-time Analytics Platform</li>
+                            <li>Executive Dashboard Development</li>
+                            <li>Predictive Analytics Models</li>
+                            <li>Custom KPI Framework</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Ready to <span class="highlight">Transform</span> Your Data Journey?</h2>
+                <p class="section-subtitle">Let's discuss how we can help you achieve your data-driven objectives.</p>
+                
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <img src="./assets/icons/email.svg" alt="Email icon" class="contact-img">
+                        </div>
+                        <h3>Start a Conversation</h3>
+                        <a href="mailto:contact@bigdatasoftwares.com" class="contact-link">contact@bigdatasoftwares.com</a>
+                    </div>
+
+                    <div class="divider" aria-hidden="true"></div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <img src="./assets/icons/phone.svg" alt="Phone icon" class="contact-img">
+                        </div>
+                        <h3>Schedule a Consultation</h3>
+                        <div class="contact-info">
+                            <span class="location-tag">Global Office</span>
+                            <a href="tel:+917337602768" class="contact-link">+91 7337 602 768</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    function scrollToSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Add ripple effect
+            const button = document.querySelector('.scroll-cta');
+            button.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+            }, 150);
+        }
+    }
+    </script>
 </body>
 </html>
