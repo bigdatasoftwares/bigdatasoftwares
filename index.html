@@ -10,7 +10,10 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <span class="logo-text">Big Data Softwares</span>
+            <!-- Replace the existing logo span with this -->
+            <a href="/" class="logo-link">
+                <span class="logo-text">Big Data Softwares</span>
+            </a>
         </div>
         <div class="nav-links">
             <a href="#expertise">Our Expertise</a>
@@ -253,6 +256,14 @@
         if (!navLinks.contains(e.target) && !menuToggle.contains(e.target) && navLinks.classList.contains('active')) {
             closeMenu();
         }
+    });
+
+    document.querySelector('.logo-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
     </script>
 </body>

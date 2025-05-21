@@ -1291,3 +1291,19 @@ p {
         font-size: 1.3rem;
     }
 }
+
+/* logo link styles */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.logo-link:hover {
+    transform: none;
+}
