@@ -16,7 +16,7 @@
             <a href="#services">Services</a>
             <a href="#contact" class="cta-button">Let's Talk</a>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -26,12 +26,12 @@
     <main>
         <section class="hero">
             <div class="hero-text">
-                <h1>
+                <h2>
                     <span class="animate-text">Data Engineering.</span>
                     <span class="animate-text delay-1">Cloud Solutions.</span>
                     <span class="animate-text delay-2">AI / ML Ops.</span>
                     <span class="animate-text delay-3">Real-time Analytics.</span>
-                </h1>
+                </h2>
                 <p class="fade-in">With years of expertise in data engineering, we architect and deliver scalable big data solutions that drive business growth.</p>
                 <div class="hero-cta">
                     <button class="cta-btn primary" onclick="scrollToSection('#services')">
@@ -215,6 +215,14 @@
     </main>
 
     <script>
+    const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    function closeMenu() {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
     function scrollToSection(sectionId) {
         const section = document.querySelector(sectionId);
         if (section) {
@@ -222,15 +230,29 @@
                 behavior: 'smooth',
                 block: 'start'
             });
-            
-            // Add ripple effect
-            const button = document.querySelector('.scroll-cta');
-            button.style.transform = 'scale(0.98)';
-            setTimeout(() => {
-                button.style.transform = 'scale(1)';
-            }, 150);
+            closeMenu();
         }
     }
+
+    // Mobile menu toggle
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        this.setAttribute('aria-expanded', 
+            this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+        );
+    });
+
+    // Close menu when clicking any nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target) && navLinks.classList.contains('active')) {
+            closeMenu();
+        }
+    });
     </script>
 </body>
 </html>
