@@ -1,3 +1,113 @@
+/* Update root variables */
+:root {
+    /* Existing color variables */
+    --primary: #00ffd5;
+    --secondary: #6c5ce7;
+    --accent: #00ff88;
+    
+    /* New typography variables */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    
+    /* Font sizes */
+    --font-xs: clamp(0.75rem, 2vw, 0.875rem);
+    --font-sm: clamp(0.875rem, 2vw, 1rem);
+    --font-base: clamp(1rem, 2vw, 1.125rem);
+    --font-lg: clamp(1.125rem, 2vw, 1.25rem);
+    --font-xl: clamp(1.25rem, 3vw, 1.5rem);
+    --font-2xl: clamp(1.5rem, 4vw, 2rem);
+    --font-3xl: clamp(2rem, 5vw, 3rem);
+    --font-4xl: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* Add font imports to the HTML head */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+/* Base typography updates */
+body {
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.hero h1 .animate-text {
+    font-size: var(--font-4xl);
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: var(--font-lg);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-3xl);
+    font-weight: 800;
+}
+
+.section-subtitle {
+    font-size: var(--font-lg);
+    color: var(--text-secondary);
+}
+
+.expertise-card h3,
+.service-card h3 {
+    font-size: var(--font-xl);
+    font-weight: 700;
+}
+
+.expertise-card p,
+.service-card p {
+    font-size: var(--font-base);
+    color: var(--text-secondary);
+}
+
+.expertise-list li,
+.service-list li {
+    font-size: var(--font-base);
+    color: var(--text-secondary);
+}
+
+.nav-links a {
+    font-size: var(--font-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-weight: 800;
+}
+
+.cta-btn {
+    font-family: var(--font-primary);
+    font-size: var(--font-base);
+    font-weight: 600;
+}
+
+.contact-card h3 {
+    font-size: var(--font-xl);
+    font-weight: 700;
+}
+
+.contact-link {
+    font-size: var(--font-lg);
+    font-weight: 500;
+}
+
 /* Root Variables with Responsive Units */
 :root {
     --primary: #00ffd5;
@@ -265,7 +375,10 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
